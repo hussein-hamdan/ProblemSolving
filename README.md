@@ -6,33 +6,40 @@ This project follows a modular structure where each problem is implemented in a 
 
 ---
 
-## 📌 Included Problems
+## 📌 Included Problems & Explanations
 
-| # | Problem | Topic |
-|--|--------|------|
-| 1 | Flood Fill | DFS / Graph |
-| 2 | Trapping Rain Water | Two Pointers |
-| 3 | Climbing Stairs | Dynamic Programming |
-| 4 | Jump Game | Greedy |
-| 5 | Rod Cutting | DP / Recursion |
-| 6 | Largest Rectangle in Histogram | Stack |
-| 7 | Maximum Rectangle in Binary Matrix | Matrix / Histogram |
+| # | Problem | Topic | Description (Brief Explanation) |
+|---|---------|-------|---------------------------------|
+| 1 | **Flood Fill** | DFS / Graph | Alters the color of a target pixel and all its horizontally/vertically connected neighboring pixels of the same color. |
+| 2 | **Trapping Rain Water** | Two Pointers | Calculates how much rainwater can be trapped between bars of varying heights after a storm. |
+| 3 | **Climbing Stairs** | Dynamic Programming | Finds the number of distinct ways to reach the top of a staircase of $N$ steps, taking either 1 or 2 steps at a time. |
+| 4 | **Jump Game** | Greedy | Determines if you can reach the last index of an array, given that each element represents your maximum jump length. |
+| 5 | **Rod Cutting** | DP / Recursion | Finds the maximum revenue obtainable by cutting up a rod of length $N$ and selling the pieces based on a price list. |
+| 6 | **Largest Rectangle in Histogram** | Stack | Finds the area of the largest rectangle that can be formed within a given histogram's bar heights. |
+| 7 | **Maximum Rectangle in Binary Matrix** | Matrix / Histogram | Finds the area of the largest rectangle containing only `1`s in a given 2D binary matrix. |
 
 ---
 
 ## 📁 Project Structure
 
+
+```
+
+```text
+Markdown file generated successfully.
+
 ```text
 src/
 │
-├── flood-fill.ts
+├── floodFill.ts
 ├── totalAmountOfWater.ts
 ├── climbStairs.ts
 ├── canJump.ts
 ├── cutRod.ts
 ├── largestRectangleArea.ts
 └── largestRectangleMatrix.ts
-````
+
+```
 
 ---
 
@@ -49,6 +56,7 @@ Install TypeScript globally:
 
 ```bash
 npm install -g typescript
+
 ```
 
 Check installation:
@@ -56,6 +64,7 @@ Check installation:
 ```bash
 tsc -v
 node -v
+
 ```
 
 ---
@@ -65,17 +74,19 @@ node -v
 ### 1. Compile a TypeScript file
 
 ```bash
-tsc floodFill.ts
+tsc src/floodFill.ts
+
 ```
 
-This will generate a `.js` file.
+This will generate a `.js` file in the same directory.
 
 ---
 
 ### 2. Run with Node.js
 
 ```bash
-node floodFill.js
+node dist/floodFill.js
+
 ```
 
 ---
@@ -85,43 +96,50 @@ node floodFill.js
 ### Flood Fill
 
 ```bash
-tsc floodFill.ts && node floodFill.js
+tsc src/floodFill.ts && node dist/floodFill.js
+
 ```
 
 ### Trapping Rain Water
 
 ```bash
-tsc totalAmountOfWater.ts && node totalAmountOfWater.js
+tsc src/totalAmountOfWater.ts && node dist/totalAmountOfWater.js
+
 ```
 
 ### Climbing Stairs
 
 ```bash
-tsc climbStairs.ts && node climbStairs.js
+tsc src/climbStairs.ts && node dist/climbStairs.js
+
 ```
 
 ### Jump Game
 
 ```bash
-tsc canJump.ts && node canJump.js
+tsc src/canJump.ts && node dist/canJump.js
+
 ```
 
 ### Rod Cutting
 
 ```bash
-tsc cutRod.ts && node cutRod.js
+tsc src/cutRod.ts && node dist/cutRod.js
+
 ```
 
 ### Largest Rectangle (Histogram)
 
 ```bash
-tsc largestRectangleArea.ts && node largestRectangleArea.js
+tsc src/largestRectangleArea.ts && node dist/largestRectangleArea.js
+
 ```
 
 ### Maximum Rectangle (Matrix)
 
 ```bash
-tsc largestRectangleMatrix.ts && node largestRectangleMatrix.js
+tsc src/largestRectangleMatrix.ts && node dist/largestRectangleMatrix.js
+
 ```
 
 ---
@@ -140,15 +158,17 @@ tsc largestRectangleMatrix.ts && node largestRectangleMatrix.js
 
 ## 📊 Complexity Overview
 
-| Problem             | Time Complexity                | Space Complexity |
-| ------------------- | ------------------------------ | ---------------- |
-| Flood Fill          | O(R × C)                       | O(R × C)         |
-| Trapping Rain Water | O(N)                           | O(1)             |
-| Climbing Stairs     | O(N)                           | O(1)             |
-| Jump Game           | O(N)                           | O(1)             |
-| Rod Cutting         | O(N²)                          | O(N)             |
-| Histogram           | O(N²) / O(N) optimized         | O(1) / O(N)      |
-| Matrix Rectangle    | O(R² × C) / O(R × C) optimized | O(C)             |
+| Problem | Time Complexity | Space Complexity |
+| --- | --- | --- |
+| Flood Fill | $O(R \times C)$ | $O(R \times C)$ |
+| Trapping Rain Water | $O(N)$ | $O(1)$ |
+| Climbing Stairs | $O(N)$ | $O(1)$ |
+| Jump Game | $O(N)$ | $O(1)$ |
+| Rod Cutting | $O(N^2)$ | $O(N)$ |
+| Histogram | $O(N^2)$ / $O(N)$ optimized | $O(1)$ / $O(N)$ |
+| Matrix Rectangle | $O(R^2 \times C)$ / $O(R \times C)$ optimized | $O(C)$ |
+
+*Where $N$ is the number of elements, $R$ is rows, and $C$ is columns.*
 
 ---
 
@@ -178,8 +198,4 @@ This project is built for:
 * Strengthening DSA fundamentals
 * Practicing TypeScript
 * Writing clean, scalable code
-
----
-
-```
-```
+"""
